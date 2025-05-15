@@ -12,9 +12,7 @@ import { Message } from "../types/Message.js";
 export class APIError extends Error
 {
 	errors: Message[];
-
 	statusCode: number;
-
 	errorResponseBody: ErrorResponseBody;
 
 	constructor(errorOrErrors: Message | Message[], statusCode = 400)
@@ -22,9 +20,7 @@ export class APIError extends Error
 		super("API Error");
 
 		this.errors = Array.isArray(errorOrErrors) ? errorOrErrors : [ errorOrErrors ];
-
 		this.statusCode = statusCode;
-
 		this.errorResponseBody =
 		{
 			success: false,

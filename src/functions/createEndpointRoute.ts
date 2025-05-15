@@ -2,7 +2,7 @@
 // Imports
 //
 
-import * as Fritter from "@donutteam/fritter";
+import * as Fritter from "@lorenstuff/fritter";
 import { z } from "zod";
 
 import { APIError } from "../classes/APIError.js";

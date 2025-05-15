@@ -2,7 +2,7 @@
 // Imports
 //
 
-import { FritterFile } from "@donutteam/fritter/build/classes/FritterFile.js";
+import { FritterFile } from "@lorenstuff/fritter/build/classes/FritterFile.js";
 import { z } from "zod";
 
 import { ErrorResponseBodySchema } from "../types/ErrorResponseBody.js";

@@ -13,7 +13,7 @@ import { MessageSchema } from "./Message.js";
 export type ErrorResponseBody = z.infer<typeof ErrorResponseBodySchema>;
 
 export const ErrorResponseBodySchema = z.object(
-	{
-		success: z.literal(false),
-		errors: z.array(MessageSchema),
-	});
+{
+	success: z.literal(false),
+	errors: z.array(MessageSchema),
+});
