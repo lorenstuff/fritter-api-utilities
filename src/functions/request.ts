@@ -2,20 +2,15 @@
 // Imports
 //
 
-import { FritterFile } from "@lorenstuff/fritter/build/classes/FritterFile.js";
 import { z } from "zod";
 
 import { ErrorResponseBodySchema } from "../types/ErrorResponseBody.js";
+import { RemapRequestBodyFritterFiles } from "../types/RemapRequestBodyFritterFiles.js";
 import { SuccessResponseBodySchema } from "../types/SuccessResponseBody.js";
 
 //
 // Locals
 //
-
-type RemapFritterFileToBrowserFile<T> =
-{
-	[K in keyof T]: T[K] extends FritterFile ? File : T[K];
-};
 
 //
 // Function
@@ -29,7 +24,7 @@ export type RequestOptions
 {
 	requestBodySchema: EndpointRequestBodySchema;
 	responseBodySchema: EndpointResponseBodySchema;
-	requestBody: RemapFritterFileToBrowserFile<z.infer<EndpointRequestBodySchema>>;
+	requestBody: RemapRequestBodyFritterFiles<z.infer<EndpointRequestBodySchema>>;
 }
 
 export async function request

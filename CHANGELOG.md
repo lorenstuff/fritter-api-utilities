@@ -1,3 +1,11 @@
+## 4.0.1
+
+* feat: now exports RemapRequestBodyFritterFiles type
+
+## 4.0.0
+
+* refactor: renamed package
+
 ## 3.0.0
 
 * refactor: changed how GET request bodies are sent and parsed
